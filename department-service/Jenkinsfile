@@ -25,8 +25,8 @@ spec:
     tty: true
   volumes:
   - name: docker-sock
-    secret: jenkins-token-k72tl
-      secretName: ssh-key-secret
+    secret:
+      secretName: jenkins-token-k72tl
     hostPath:
       path: /var/run/docker.sock  
       type: Socket
