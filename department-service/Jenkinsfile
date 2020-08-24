@@ -25,6 +25,8 @@ spec:
     tty: true
   volumes:
   - name: docker-sock
+    secret: jenkins-token-k72tl
+      secretName: ssh-key-secret
     hostPath:
       path: /var/run/docker.sock  
       type: Socket
@@ -36,7 +38,8 @@ spec:
     DOCKER_NAMESPACE = 'saloyiana'
     SERVICE_NAME = 'department-service'
     TOKEN=credentials('a3845106-ff6a-494a-9d4f-87db24001189')
-  }
+    SEC=credentials('secret')  
+}
   stages {
       stage("Build") {
           steps {
@@ -75,7 +78,7 @@ spec:
                   sh '''
                       cd $SERVICE_NAME
                       kubectl --token=$TOKEN -n jenkins get all
-                      # kubectl --token=$TOKEN -n jenkins apply -f deploy.yaml -f service.yaml
+                      # kubectl --token=$TOKEN -n jenkins apply -f deploy.yaml -f service.yaml 
                   '''
               }
           }
