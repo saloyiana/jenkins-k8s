@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: office-service
-        image: saloyiana/department-service
+        image: saloyiana/office-service
         ports:
         - containerPort: 80
 ---
