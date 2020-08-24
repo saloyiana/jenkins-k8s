@@ -15,6 +15,7 @@ spec:
       labels:
         app: deployment-service
     spec:
+      serviceAccountName: jenkins
       containers:
       - name: department-service
         image: bryandollery/department-service
