@@ -43,7 +43,7 @@ spec:
           steps {
               container('dnd') {
                   sh '''
-                      cd $SERVICE_NAME
+                      cd project-assessment-site/
                       docker build --tag $DOCKER_NAMESPACE/$SERVICE_NAME .
                   '''
               }
