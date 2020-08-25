@@ -13,7 +13,7 @@ spec:
         backend:
           serviceName: department-service
           servicePort: 80
-      - path: 
+      - path: /
         backend:
           serviceName: main-service
           servicePort: 80
@@ -21,3 +21,8 @@ spec:
         backend:
           serviceName: office-service
           servicePort: 80
+      - path: /person
+        backend:
+          serviceName: person-service
+          servicePort: 80
+
