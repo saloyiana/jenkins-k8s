@@ -4,7 +4,7 @@ WORKDIR /usr/src/app
 
 arg rebuild
 
-run https://github.com/saloyiana/jenkins-k8s.git && \
+run git clone https://github.com/saloyiana/jenkins-k8s.git && \
     cd jenkins-k8s/role-service/  && \
     mvn clean package
 
