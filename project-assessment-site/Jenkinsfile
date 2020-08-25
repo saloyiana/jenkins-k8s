@@ -66,6 +66,9 @@ spec:
                       cd project-assessment-site/
                       kubectl --token=$TOKEN -n test get all
                       kubectl --token=$TOKEN -n test apply -f deploy.yaml
+                      cd ..
+                      cd ingress/
+                      kubectl --token=$TOKEN -n test apply -f ingress.yaml
                   '''
               }
           }
