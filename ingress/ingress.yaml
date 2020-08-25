@@ -25,4 +25,9 @@ spec:
         backend:
           serviceName: person-service
           servicePort: 80
+      - path: /role
+        backend:
+          serviceName: role-service
+          servicePort: 80
+
 
