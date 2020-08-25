@@ -5,8 +5,7 @@ WORKDIR /usr/src/app
 arg rebuild
 
 run https://github.com/saloyiana/jenkins-k8s.git && \
-    cd jenkins-k8s/role-service/
-  && \
+    cd jenkins-k8s/role-service/  && \
     mvn clean package
 
 from adoptopenjdk/openjdk11:alpine
