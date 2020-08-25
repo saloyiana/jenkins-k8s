@@ -63,7 +63,7 @@ spec:
           steps {
               container('kubectl') {
                   sh '''
-                      cd $SERVICE_NAME
+                      cd project-assessment-site/
                       kubectl --token=$TOKEN -n test get all
                       kubectl --token=$TOKEN -n test apply -f deploy.yaml
                   '''
