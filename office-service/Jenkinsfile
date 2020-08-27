@@ -47,7 +47,7 @@ spec:
                   '''
               }
           }
-      }
+     }
       stage("Release") {
           steps {
               container('dnd') {
